@@ -1,0 +1,4 @@
+src/app/styles
+node_modules
+build
+.git
