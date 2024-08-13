@@ -1,22 +1,15 @@
 import { AppPaths } from "@/app/providers"
-import { ContentTemplate } from "@/shared/ui"
-import { Button } from "@/shared/ui/button"
-import { useNavigate } from "react-router-dom"
+import { ContentTemplate, Heading } from "@/shared/ui"
+import { AppLink } from "@/shared/ui"
 
 export const MainPage = () => {
-  const navigate = useNavigate()
-
-  const click = () => {
-    navigate(AppPaths.not_found)
-  }
-
   return (
     <ContentTemplate title="Мои дела">
       <div className="flex flex-col gap-8">
-        <h1>MainPage</h1>
-        <Button onClick={click} variant={"primary"} size={"medium"}>
+        <Heading>MainPage</Heading>
+        <AppLink to={AppPaths.not_found} className="w-fit">
           На страницу ошибки
-        </Button>
+        </AppLink>
       </div>
     </ContentTemplate>
   )
