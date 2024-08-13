@@ -5,7 +5,7 @@ export const MainPage = () => {
   const navigate = useNavigate()
 
   const click = () => {
-    navigate(AppPaths.error)
+    navigate(AppPaths.not_found)
   }
 
   return (

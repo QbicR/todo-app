@@ -1,4 +1,4 @@
-import { routeConfig } from "../../../shared/config/router-config"
+import { routeConfig } from "./router-config"
 import { Route, Routes } from "react-router-dom"
 
 export const AppRouter = () => (

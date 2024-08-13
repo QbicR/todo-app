@@ -1,2 +1,2 @@
-export * from "../../../shared/config/router-config"
-export * from "./router-provider"
+export * from "./router-config"
+export * from "./app-router"
