@@ -1,5 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-import colors from "tailwindcss/colors"
+import { Config } from "tailwindcss"
 
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -7,13 +6,15 @@ export default {
     fontFamily: {
       sans: "Roboto",
     },
-    colors: { ...colors },
     extend: {
       height: {
         header: "var(--header-height)",
-        content: "var(--content-height)",
+        main: "var(--main-height)",
+      },
+      colors: {
+        "primary-gray": "var(--primary-gray)",
       },
     },
   },
   plugins: [],
-}
+} satisfies Config
