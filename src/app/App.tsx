@@ -1,12 +1,16 @@
 import { Text } from "@/shared/ui";
+import { IWWW } from "./types";
 
-function App() {
+const App = () => {
+  const a: IWWW = "hello";
+
   return (
     <div>
+      {a}
       Todos App
       <Text />
     </div>
   );
-}
+};
 
 export default App;

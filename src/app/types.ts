@@ -1,0 +1,1 @@
+export type IWWW = string;
