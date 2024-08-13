@@ -11,8 +11,8 @@ export const buttonStyles = cva("button", {
       ],
     },
     size: {
-      small: ["text-sm", "py-2", "px-3"],
-      medium: ["text-base", "py-3", "px-4"],
+      small: ["text-sm py-2 px-4"],
+      medium: ["text-base py-2.5 px-6"],
     },
   },
   compoundVariants: [
