@@ -15,7 +15,7 @@ export const TextField: FC<ITextFieldProps> = ({
   const labelSize = size === "small" ? "text-sm" : "text-base"
 
   return (
-    <Field className="flex flex-col gap-2" disabled={disabled}>
+    <Field className="flex w-full flex-col gap-2" disabled={disabled}>
       {label && (
         <Label
           className={twMerge(

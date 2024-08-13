@@ -5,3 +5,6 @@ export { TodoIcon } from "./icons"
 export { Heading } from "./heading"
 export { Text } from "./text"
 export { TextField } from "./text-field"
+export { Select } from "./select"
+
+export type { ISelectOption } from "./select"
