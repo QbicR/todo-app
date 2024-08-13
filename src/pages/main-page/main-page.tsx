@@ -1,39 +1,17 @@
-import {
-  Button,
-  ContentTemplate,
-  Heading,
-  ISelectOption,
-  Select,
-  TextField,
-} from "@/shared/ui"
-
-import { useState } from "react"
-
-const options: ISelectOption[] = [
-  { label: "Все дела", value: "all" },
-  { label: "Выполненные", value: "completed" },
-  { label: "Не выполненные", value: "uncompleted" },
-]
+import { AddTodo } from "@/features/add-todo"
+import { FilterTodo } from "@/features/filter-todo"
+import { FindTodo } from "@/features/find-todo"
+import { ContentTemplate, Heading } from "@/shared/ui"
 
 export const MainPage = () => {
-  const [selectValue, setSelectValue] = useState("")
-
   return (
-    <ContentTemplate title="Мои дела">
+    <ContentTemplate title="Мои задачи">
       <div className="flex flex-col gap-8">
-        <Heading className="text-3xl font-medium">Мои дела</Heading>
+        <Heading className="text-3xl font-medium">Мои задачи</Heading>
         <div className="flex gap-4">
-          <form className="flex w-full gap-4" noValidate>
-            <TextField placeholder="Поиск" />
-            <Button type="submit">Найти</Button>
-          </form>
-          <Select
-            options={options}
-            value={selectValue}
-            onChange={value => setSelectValue(value)}
-            size={"medium"}
-          />
-          <Button type="button">Добавить</Button>
+          <FindTodo />
+          <FilterTodo />
+          <AddTodo />
         </div>
       </div>
     </ContentTemplate>
