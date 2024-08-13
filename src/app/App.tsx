@@ -1,16 +1,7 @@
-import { Text } from "@/shared/ui";
-import { IWWW } from "./types";
+import { AppRouter } from "./providers";
 
 const App = () => {
-  const a: IWWW = "hello";
-
-  return (
-    <div>
-      {a}
-      Todos App
-      <Text />
-    </div>
-  );
+  return <AppRouter />;
 };
 
 export default App;
