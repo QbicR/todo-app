@@ -8,6 +8,12 @@ export default {
       sans: "Roboto",
     },
     colors: { ...colors },
+    extend: {
+      height: {
+        header: "var(--header-height)",
+        content: "var(--content-height)",
+      },
+    },
   },
   plugins: [],
 }
