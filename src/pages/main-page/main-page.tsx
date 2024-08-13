@@ -1,5 +1,6 @@
 import { AppPaths } from "@/app/providers"
 import { ContentTemplate } from "@/shared/ui"
+import { Button } from "@/shared/ui/button"
 import { useNavigate } from "react-router-dom"
 
 export const MainPage = () => {
@@ -13,9 +14,9 @@ export const MainPage = () => {
     <ContentTemplate title="Мои дела">
       <div className="flex flex-col gap-8">
         <h1>MainPage</h1>
-        <button onClick={click} className="w-fit rounded border px-4 py-2">
+        <Button onClick={click} variant={"primary"} size={"medium"}>
           На страницу ошибки
-        </button>
+        </Button>
       </div>
     </ContentTemplate>
   )
