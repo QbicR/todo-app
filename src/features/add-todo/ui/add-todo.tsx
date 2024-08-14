@@ -1,18 +1,15 @@
 import { useModalBase } from "@/shared/hooks"
 import { Button } from "@/shared/ui"
 
+import { AddTodoForm } from "./add-todo-form"
+
 export const AddTodo = () => {
   const { openModal, closeModal, modalContent } = useModalBase()
 
   const handleOpenModal = () => {
     openModal({
       header: "Добавление дела",
-      body: <p>Добавление дела</p>,
-      footer: (
-        <Button size="md" onClick={closeModal}>
-          Добавить
-        </Button>
-      ),
+      content: <AddTodoForm onSubmit={closeModal} />,
     })
   }
 

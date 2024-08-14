@@ -8,12 +8,12 @@ import { ErrorBoundary } from "./app/providers"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <NextUIProvider>
+    <BrowserRouter>
       <ErrorBoundary>
-        <BrowserRouter>
+        <NextUIProvider>
           <App />
-        </BrowserRouter>
+        </NextUIProvider>
       </ErrorBoundary>
-    </NextUIProvider>
+    </BrowserRouter>
   </StrictMode>,
 )

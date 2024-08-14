@@ -2,9 +2,7 @@ import type { ReactElement } from "react"
 
 import {
   Modal,
-  ModalBody,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react"
@@ -12,20 +10,18 @@ import { useState } from "react"
 
 interface IModalState {
   header: string | null
-  body: ReactElement | null
-  footer: ReactElement | null
+  content: ReactElement | null
 }
 
 export const useModalBase = () => {
   const { isOpen, onOpen, onClose: closeModal } = useDisclosure()
   const [modalState, setModalState] = useState<IModalState>({
     header: null,
-    body: null,
-    footer: null,
+    content: null,
   })
 
-  const openModal = ({ header, body, footer }: IModalState) => {
-    setModalState({ header, body, footer })
+  const openModal = ({ header, content }: IModalState) => {
+    setModalState({ header, content })
 
     onOpen()
   }
@@ -34,8 +30,7 @@ export const useModalBase = () => {
     <Modal size="3xl" isOpen={isOpen} onClose={closeModal}>
       <ModalContent>
         <ModalHeader className="font-medium">{modalState.header}</ModalHeader>
-        <ModalBody>{modalState.body}</ModalBody>
-        <ModalFooter>{modalState.footer}</ModalFooter>
+        {modalState.content}
       </ModalContent>
     </Modal>
   )

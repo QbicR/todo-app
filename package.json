@@ -10,7 +10,7 @@
     "format:fix": "npx prettier --check --write './**/*.{js,ts,jsx,tsx}'",
     "lint": "npx eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "npx eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
-    "format-all": "npm run format:fix && npm run lint:fix",
+    "fix-all": "npm run format:fix && npm run lint:fix",
     "preview": "vite preview",
     "prepare": "husky install"
   },

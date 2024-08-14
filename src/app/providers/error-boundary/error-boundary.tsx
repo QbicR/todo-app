@@ -1,5 +1,6 @@
 import type { ErrorInfo, ReactNode } from "react"
 
+import { NotFoundPage } from "@/pages/not-found-page"
 import React from "react"
 
 interface ErrorBoundaryProps {
@@ -33,7 +34,7 @@ export class ErrorBoundary extends React.Component<
     const { children } = this.props
 
     if (hasError) {
-      return <div>ERROR</div>
+      return <NotFoundPage />
     }
 
     return children
