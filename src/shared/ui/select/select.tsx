@@ -1,6 +1,9 @@
+import type { ChangeEvent, FC } from "react"
+
 import { Field, Select as SelectUI } from "@headlessui/react"
-import { ChangeEvent, FC } from "react"
-import { ISelectProps } from "./types"
+
+import type { ISelectProps } from "./types"
+
 import { selectStyles } from "./styles"
 
 export const Select: FC<ISelectProps> = ({

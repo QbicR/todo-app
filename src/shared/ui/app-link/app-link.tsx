@@ -1,5 +1,7 @@
-import { FC, PropsWithChildren } from "react"
-import { Link, LinkProps } from "react-router-dom"
+import type { FC, PropsWithChildren } from "react"
+import type { LinkProps } from "react-router-dom";
+
+import { Link } from "react-router-dom"
 import { twMerge } from "tailwind-merge"
 
 interface IProps extends LinkProps {

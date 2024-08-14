@@ -1,6 +1,7 @@
-import { InputHTMLAttributes } from "react"
-import { textFieldStyles } from "./styles"
-import { VariantProps } from "class-variance-authority"
+import type { VariantProps } from "class-variance-authority"
+import type { InputHTMLAttributes } from "react"
+
+import type { textFieldStyles } from "./styles"
 
 interface IProps {
   label?: string

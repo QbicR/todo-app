@@ -11,9 +11,6 @@ export default {
         header: "var(--header-height)",
         main: "var(--main-height)",
       },
-      colors: {
-        "primary-gray": "var(--primary-gray)",
-      },
     },
   },
   plugins: [],

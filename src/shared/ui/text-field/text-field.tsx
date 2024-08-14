@@ -1,7 +1,10 @@
+import type { FC } from "react"
+
 import { Field, Input, Label } from "@headlessui/react"
-import { FC } from "react"
 import { twMerge } from "tailwind-merge"
-import { ITextFieldProps } from "./types"
+
+import type { ITextFieldProps } from "./types"
+
 import { textFieldStyles } from "./styles"
 
 export const TextField: FC<ITextFieldProps> = ({

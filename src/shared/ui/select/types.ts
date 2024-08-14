@@ -1,6 +1,7 @@
-import { VariantProps } from "class-variance-authority"
-import { SelectHTMLAttributes } from "react"
-import { selectStyles } from "./styles"
+import type { VariantProps } from "class-variance-authority"
+import type { SelectHTMLAttributes } from "react"
+
+import type { selectStyles } from "./styles"
 
 export interface ISelectOption {
   value: string

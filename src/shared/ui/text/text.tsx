@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react"
+import type { FC, PropsWithChildren } from "react"
 
 interface IProps {
   as?: "p" | "label" | "span"

@@ -1,7 +1,10 @@
-import { FC, PropsWithChildren } from "react"
+import type { FC, PropsWithChildren } from "react"
+
 import { Button as ButtonUI } from "@headlessui/react"
+
+import type { IButtonProps } from "./types"
+
 import { buttonStyles } from "./styles"
-import { IButtonProps } from "./types"
 
 export const Button: FC<PropsWithChildren<IButtonProps>> = ({
   children,
