@@ -1,5 +1,5 @@
-export { ContentTemplate } from "./content-template"
 export { AppLink } from "./app-link"
+export { ContentTemplate } from "./content-template"
 export { Button } from "./button"
 export { TodoIcon } from "./icons"
 export { Heading } from "./heading"

@@ -42,6 +42,12 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules,
       "no-console": "error",
+      "@typescript-eslint/consistent-type-exports": [
+        "error",
+        {
+          fixMixedExportsWithInlineTypeSpecifier: false,
+        },
+      ],
       "@typescript-eslint/consistent-type-imports": [
         "error",
         {
