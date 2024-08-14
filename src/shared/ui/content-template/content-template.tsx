@@ -16,7 +16,7 @@ export const ContentTemplate: FC<PropsWithChildren<IProps>> = ({
 
   return (
     <main className="relative flex h-main w-full grow flex-col items-center px-8 py-6">
-      <div className="w-full max-w-6xl">{children}</div>
+      <div className="h-full w-full max-w-6xl">{children}</div>
     </main>
   )
 }

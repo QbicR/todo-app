@@ -9,8 +9,8 @@ export const Header = () => {
           to={AppPaths.main}
           className="flex w-fit cursor-pointer items-center gap-4"
         >
-          <TodoIcon className="h-10 w-10" />
-          <span className="text-3xl font-medium leading-tight">Список дел</span>
+          <TodoIcon className="h-8 w-8" />
+          <span className="text-2xl font-medium leading-tight">Список дел</span>
         </AppLink>
       </div>
     </header>
