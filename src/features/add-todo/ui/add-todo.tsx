@@ -1,5 +1,5 @@
 import { useModalBase } from "@/shared/hooks"
-import { Button } from "@nextui-org/react"
+import { Button } from "@/shared/ui"
 
 export const AddTodo = () => {
   const { openModal, closeModal, modalContent } = useModalBase()
@@ -9,7 +9,7 @@ export const AddTodo = () => {
       header: "Добавление задачи",
       body: <p>Добавление задачи</p>,
       footer: (
-        <Button color="primary" size="md" radius="sm" onClick={closeModal}>
+        <Button size="md" onClick={closeModal}>
           Добавить
         </Button>
       ),
@@ -18,9 +18,7 @@ export const AddTodo = () => {
 
   return (
     <>
-      <Button color="primary" size="lg" radius="sm" onClick={handleOpenModal}>
-        Добавить задачу
-      </Button>
+      <Button onClick={handleOpenModal}>Добавить задачу</Button>
       {modalContent}
     </>
   )

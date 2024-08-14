@@ -31,7 +31,7 @@ export const useModalBase = () => {
   }
 
   const modalContent = (
-    <Modal size="3xl" isOpen={isOpen} onClose={closeModal} disableAnimation>
+    <Modal size="3xl" isOpen={isOpen} onClose={closeModal}>
       <ModalContent>
         <ModalHeader className="font-medium">{modalState.header}</ModalHeader>
         <ModalBody>{modalState.body}</ModalBody>

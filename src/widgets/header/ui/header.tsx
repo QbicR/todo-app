@@ -1,6 +1,5 @@
 import { AppPaths } from "@/app/providers"
-import { TodoIcon } from "@/shared/ui"
-import { Button } from "@nextui-org/react"
+import { Button, TodoIcon } from "@/shared/ui"
 import { useNavigate } from "react-router-dom"
 
 export const Header = () => {
@@ -12,7 +11,6 @@ export const Header = () => {
         <Button
           variant="light"
           color="default"
-          size="lg"
           className="w-fit px-0"
           onClick={() => navigate(AppPaths.main, { replace: true })}
           startContent={<TodoIcon className="h-8 w-8" />}

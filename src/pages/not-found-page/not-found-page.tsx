@@ -1,6 +1,5 @@
 import { AppPaths } from "@/app/providers"
-import { ContentTemplate, NotFoundIcon } from "@/shared/ui"
-import { Button } from "@nextui-org/react"
+import { Button, ContentTemplate, NotFoundIcon } from "@/shared/ui"
 import { useNavigate } from "react-router-dom"
 
 export const NotFoundPage = () => {
@@ -18,11 +17,8 @@ export const NotFoundPage = () => {
           <h3>Проверьте ссылку или вернитесь на главную страницу.</h3>
         </div>
         <Button
-          color="primary"
-          size="lg"
           className="w-fit"
           onClick={() => navigate(AppPaths.main, { replace: true })}
-          radius="sm"
         >
           На главную
         </Button>
