@@ -1,5 +1,9 @@
-import { Button } from "@/shared/ui"
+import { Button } from "@nextui-org/react"
 
 export const AddTodo = () => {
-  return <Button type="button">Добавить</Button>
+  return (
+    <Button color="primary" size="lg" radius="sm">
+      Добавить задачу
+    </Button>
+  )
 }

@@ -1,17 +1,24 @@
 import { AppPaths } from "@/app/providers"
-import { AppLink, TodoIcon } from "@/shared/ui"
+import { TodoIcon } from "@/shared/ui"
+import { Button } from "@nextui-org/react"
+import { useNavigate } from "react-router-dom"
 
 export const Header = () => {
+  const navigate = useNavigate()
+
   return (
     <header className="relative flex h-header w-full grow items-center justify-center border-b px-8 py-4">
       <div className="w-full max-w-6xl">
-        <AppLink
-          to={AppPaths.main}
-          className="flex w-fit cursor-pointer items-center gap-4"
+        <Button
+          variant="light"
+          color="default"
+          size="lg"
+          className="w-fit px-0"
+          onClick={() => navigate(AppPaths.main, { replace: true })}
+          startContent={<TodoIcon className="h-8 w-8" />}
         >
-          <TodoIcon className="h-8 w-8" />
-          <span className="text-2xl font-medium leading-tight">Список дел</span>
-        </AppLink>
+          Список дел
+        </Button>
       </div>
     </header>
   )

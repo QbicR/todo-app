@@ -1,10 +1,9 @@
 export { AppLink } from "./app-link"
 export { ContentTemplate } from "./content-template"
-export { Button } from "./button"
-export { TodoIcon } from "./icons"
-export { Heading } from "./heading"
-export { Text } from "./text"
-export { TextField } from "./text-field"
-export { Select } from "./select"
-
-export type { ISelectOption } from "./select"
+export {
+  TodoIcon,
+  DeleteIcon,
+  PenIcon,
+  SearchIcon,
+  NotFoundIcon,
+} from "./icons"

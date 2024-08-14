@@ -11,6 +11,14 @@
   font-family: Roboto;
 }
 
+h1 {
+  @apply text-3xl font-medium;
+}
+
+h3 {
+  @apply text-xl font-medium;
+}
+
 :root {
   --header-height: 72px;
   --main-height: calc(100vh - var(--header-height));

@@ -1,7 +1,12 @@
-import type { ISelectOption } from "@/shared/ui"
+import type { ChangeEvent } from "react"
 
-import { Select } from "@/shared/ui"
+import { Select, SelectItem } from "@nextui-org/react"
 import { useState } from "react"
+
+interface ISelectOption {
+  label: string
+  value: string
+}
 
 const options: ISelectOption[] = [
   { label: "Все задачи", value: "all" },
@@ -10,14 +15,25 @@ const options: ISelectOption[] = [
 ]
 
 export const FilterTodo = () => {
-  const [selectValue, setSelectValue] = useState<string>("Все задачи")
+  const [selectValue, setSelectValue] = useState("all")
+
+  const handleSelectionChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSelectValue(e.target.value)
+  }
 
   return (
     <Select
-      options={options}
-      value={selectValue}
-      onChange={value => setSelectValue(value)}
-      size={"medium"}
-    />
+      aria-label="Все задачи"
+      selectedKeys={[selectValue]}
+      onChange={handleSelectionChange}
+      size="lg"
+      color="default"
+      className="w-52"
+      radius="sm"
+    >
+      {options.map(option => (
+        <SelectItem key={option.value}>{option.label}</SelectItem>
+      ))}
+    </Select>
   )
 }

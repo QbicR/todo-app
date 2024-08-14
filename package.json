@@ -15,14 +15,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.0",
+    "@nextui-org/react": "^2.4.6",
+    "framer-motion": "^11.3.26",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
-    "@headlessui/react": "^2.1.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
