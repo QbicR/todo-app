@@ -6,8 +6,8 @@ export const AddTodo = () => {
 
   const handleOpenModal = () => {
     openModal({
-      header: "Добавление задачи",
-      body: <p>Добавление задачи</p>,
+      header: "Добавление дела",
+      body: <p>Добавление дела</p>,
       footer: (
         <Button size="md" onClick={closeModal}>
           Добавить
@@ -18,7 +18,7 @@ export const AddTodo = () => {
 
   return (
     <>
-      <Button onClick={handleOpenModal}>Добавить задачу</Button>
+      <Button onClick={handleOpenModal}>Добавить дело</Button>
       {modalContent}
     </>
   )

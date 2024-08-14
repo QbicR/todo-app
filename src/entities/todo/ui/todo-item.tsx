@@ -18,8 +18,8 @@ export const TodoItem: FC<IProps> = ({
 
   const handleOpenChangeTodoModal = () => {
     openModal({
-      header: "Изменение задачи",
-      body: <p>Изменение задачи</p>,
+      header: "Изменение дела",
+      body: <p>Изменение дела</p>,
       footer: (
         <Button size="md" onClick={closeModal}>
           Сохранить
@@ -30,8 +30,8 @@ export const TodoItem: FC<IProps> = ({
 
   const handleOpenDeleteTodoModal = () => {
     openModal({
-      header: "Удаление задачи",
-      body: <p>Удаление задачи</p>,
+      header: "Удаление дела",
+      body: <p>Удаление дела</p>,
       footer: (
         <div className="flex grow justify-between">
           <Button color="default" variant="flat" size="md" onClick={closeModal}>

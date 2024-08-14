@@ -9,7 +9,7 @@ interface ISelectOption {
 }
 
 const options: ISelectOption[] = [
-  { label: "Все задачи", value: "all" },
+  { label: "Все дела", value: "all" },
   { label: "Выполненные", value: "completed" },
   { label: "Не выполненные", value: "uncompleted" },
 ]
@@ -23,8 +23,9 @@ export const FilterTodo = () => {
 
   return (
     <Select
-      aria-label="Все задачи"
+      aria-label="Все дела"
       selectedKeys={[selectValue]}
+      disabledKeys={[selectValue]}
       onChange={handleSelectionChange}
       size="lg"
       color="default"

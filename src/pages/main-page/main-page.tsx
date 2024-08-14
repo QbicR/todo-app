@@ -4,9 +4,9 @@ import { TodoList } from "@/widgets/todo-list"
 
 export const MainPage = () => {
   return (
-    <ContentTemplate title="Мои задачи">
+    <ContentTemplate title="Мои дела">
       <div className="flex h-full flex-col gap-8">
-        <h1>Мои задачи</h1>
+        <h1>Мои дела</h1>
         <FindTodo />
         <TodoList />
       </div>

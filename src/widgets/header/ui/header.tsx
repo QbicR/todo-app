@@ -15,7 +15,7 @@ export const Header = () => {
           onClick={() => navigate(AppPaths.main, { replace: true })}
           startContent={<TodoIcon className="h-8 w-8" />}
         >
-          Список дел
+          Дела
         </Button>
       </div>
     </header>
