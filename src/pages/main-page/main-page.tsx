@@ -1,4 +1,4 @@
-import { TodoItem } from "@/entities/todo"
+import { TODO_LIST, TodoItem } from "@/entities/todo"
 import { AddTodo } from "@/features/add-todo"
 import { FilterTodo } from "@/features/filter-todo"
 import { FindTodo } from "@/features/find-todo"
@@ -17,12 +17,10 @@ export const MainPage = () => {
             <FilterTodo />
             <AddTodo />
           </div>
-          <div className="overflow-auto bg-blue-100">
-            {Array(15)
-              .fill(0)
-              .map((_, index) => (
-                <TodoItem key={index} />
-              ))}
+          <div className="overflow-auto">
+            {TODO_LIST.map((todo, index) => (
+              <TodoItem key={index} todo={todo} />
+            ))}
           </div>
         </div>
       </div>
