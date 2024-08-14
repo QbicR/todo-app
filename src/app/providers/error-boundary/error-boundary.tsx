@@ -1,4 +1,4 @@
-import type { ErrorInfo, ReactNode } from "react";
+import type { ErrorInfo, ReactNode } from "react"
 
 import React from "react"
 
@@ -24,7 +24,8 @@ export class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.log(error, errorInfo)
+    // eslint-disable-next-line no-console
+    console.error(error, errorInfo)
   }
 
   render() {

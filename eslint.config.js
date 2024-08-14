@@ -41,6 +41,7 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"],
     rules: {
       ...reactHooks.configs.recommended.rules,
+      "no-console": "error",
       "@typescript-eslint/consistent-type-imports": [
         "error",
         {

@@ -1,4 +1,4 @@
-import type { FC, PropsWithChildren} from "react";
+import type { FC, PropsWithChildren } from "react"
 
 import { useEffect } from "react"
 
@@ -15,7 +15,7 @@ export const ContentTemplate: FC<PropsWithChildren<IProps>> = ({
   }, [title])
 
   return (
-    <main className="h-main relative flex w-full grow flex-col items-center px-8 py-6">
+    <main className="relative flex h-main w-full grow flex-col items-center px-8 py-6">
       <div className="w-full max-w-6xl">{children}</div>
     </main>
   )

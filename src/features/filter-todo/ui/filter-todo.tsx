@@ -1,4 +1,4 @@
-import type { ISelectOption} from "@/shared/ui";
+import type { ISelectOption } from "@/shared/ui"
 
 import { Select } from "@/shared/ui"
 import { useState } from "react"

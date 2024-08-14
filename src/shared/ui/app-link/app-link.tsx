@@ -1,5 +1,5 @@
 import type { FC, PropsWithChildren } from "react"
-import type { LinkProps } from "react-router-dom";
+import type { LinkProps } from "react-router-dom"
 
 import { Link } from "react-router-dom"
 import { twMerge } from "tailwind-merge"
