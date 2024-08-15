@@ -21,7 +21,7 @@ export default tseslint.config(
     ignores: [
       "node_modules",
       "dist",
-      "eslint.config.js",
+      "eslint.config.mjs",
       "postcss.config.mjs",
       "tailwind.config.ts",
       "json-server",

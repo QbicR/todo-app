@@ -2,7 +2,6 @@
   "name": "todos-app",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npm run start:server\"",
     "dev": "vite",
