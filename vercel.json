@@ -8,11 +8,5 @@
         "includeFiles": ["json-server/db.json"]
       }
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "json-server/index.js"
-    }
   ]
 }
