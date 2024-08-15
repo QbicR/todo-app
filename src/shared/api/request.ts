@@ -4,7 +4,7 @@ import axios from "axios"
 
 type TMethods = "get" | "post" | "put" | "delete"
 
-const BASE_URL = "http://localhost:8000/"
+const BASE_URL = import.meta.env.VITE_API_URL
 
 const DEFAULT_HEADERS = {
   Accept: "application/json",

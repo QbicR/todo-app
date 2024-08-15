@@ -19,7 +19,9 @@ const fetchTodos = async ({ search, status }: IFetchTodosParams) => {
     params.status = status
   }
 
-  return (await request<ITodo[]>("get", "/todos", { params })).data
+  return (
+    await request<ITodo[]>("get", "/todos?_sort=id&_order=desc", { params })
+  ).data
 }
 
 const useGetTodos = ({ search, status }: IFetchTodosParams) =>
@@ -27,7 +29,6 @@ const useGetTodos = ({ search, status }: IFetchTodosParams) =>
     refetchOnMount: false,
     refetchOnReconnect: false,
     refetchOnWindowFocus: false,
-    meta: { search: search, status: status },
   })
 
 export const useGetAndFilterTodos = () => {

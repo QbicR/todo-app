@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm run dev\" \"npm run start:server\"",
-    "dev": "vite",
+    "start": "vite",
+    "dev": "concurrently \"npm run dev\" \"npm run start:server\"",
     "start:server": "node ./json-server/index.js",
     "build": "tsc -b && vite build",
     "format": "npx prettier --check './**/*.{js,ts,jsx,tsx}'",
