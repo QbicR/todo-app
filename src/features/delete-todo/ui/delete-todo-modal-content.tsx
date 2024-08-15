@@ -1,7 +1,6 @@
 import type { FC } from "react"
 
 import { Button } from "@/shared/ui"
-import { ModalBody, ModalFooter } from "@nextui-org/react"
 
 interface IProps {
   onSubmit: () => void
@@ -10,15 +9,17 @@ interface IProps {
 export const DeleteTodoModalContent: FC<IProps> = ({ onSubmit }) => {
   return (
     <>
-      <ModalBody className="gap-6 py-4">Удаление дела</ModalBody>
-      <ModalFooter className="justify-between">
+      <div className="flex flex-col gap-6 px-6 py-4">
+        Сделал дело? Гуляй смело!
+      </div>
+      <div className="flex justify-between px-6 py-4">
         <Button color="default" variant="flat" size="md" onClick={onSubmit}>
-          Отменить
+          Доделаю
         </Button>
         <Button size="md" onClick={onSubmit}>
-          Удалить
+          Сделал!
         </Button>
-      </ModalFooter>
+      </div>
     </>
   )
 }

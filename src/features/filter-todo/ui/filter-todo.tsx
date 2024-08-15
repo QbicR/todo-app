@@ -11,7 +11,7 @@ interface ISelectOption {
 const options: ISelectOption[] = [
   { label: "Все дела", value: "all" },
   { label: "Выполненные", value: "completed" },
-  { label: "Не выполненные", value: "uncompleted" },
+  { label: "Не выполненные", value: "active" },
 ]
 
 export const FilterTodo = () => {
