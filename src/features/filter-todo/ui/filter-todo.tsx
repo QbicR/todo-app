@@ -1,24 +1,30 @@
-import type { ChangeEvent } from "react"
+import type { TTodoStatus } from "@/entities/todo"
+import type { ChangeEvent, FC } from "react"
 
 import { Select, SelectItem } from "@nextui-org/react"
 import { useState } from "react"
 
 interface ISelectOption {
   label: string
-  value: string
+  value: TTodoStatus
 }
 
 const options: ISelectOption[] = [
-  { label: "Все дела", value: "all" },
+  { label: "Все дела", value: "" },
   { label: "Выполненные", value: "completed" },
   { label: "Не выполненные", value: "active" },
 ]
 
-export const FilterTodo = () => {
-  const [selectValue, setSelectValue] = useState("all")
+interface IProps {
+  setFilterValue: (status: TTodoStatus) => void
+}
+
+export const FilterTodo: FC<IProps> = ({ setFilterValue }) => {
+  const [selectValue, setSelectValue] = useState<TTodoStatus>("")
 
   const handleSelectionChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setSelectValue(e.target.value)
+    setSelectValue(e.target.value as TTodoStatus)
+    setFilterValue(e.target.value as TTodoStatus)
   }
 
   return (

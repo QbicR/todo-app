@@ -1,7 +1,7 @@
 import type { ReactElement } from "react"
 
 import { Checkbox } from "@nextui-org/react"
-import { useState, type FC } from "react"
+import { type FC } from "react"
 import { twMerge } from "tailwind-merge"
 
 import type { ITodo } from "../types"
@@ -15,25 +15,26 @@ export const TodoItem: FC<IProps> = ({
   todo: { name, description, status },
   actions,
 }) => {
-  const [checked, setChecked] = useState<boolean>(status === "completed")
-
   return (
     <div
       className={twMerge(
         "flex items-center gap-4 border-b border-gray-500 px-4 py-2 last:border-none",
-        checked ? "bg-blue-100/50" : "bg-blue-100",
+        status === "completed" ? "bg-blue-100/50" : "bg-blue-100",
       )}
     >
       <Checkbox
-        isSelected={checked}
-        onValueChange={setChecked}
+        isSelected={status === "completed"}
+        onValueChange={() => {}}
         size="lg"
         color="primary"
       />
       <div className="flex grow items-center justify-between gap-8">
         <div className="flex flex-col gap-2">
           <label
-            className={twMerge("leading-tight", checked && "line-through")}
+            className={twMerge(
+              "leading-tight",
+              status === "completed" && "line-through",
+            )}
           >
             {name}
           </label>

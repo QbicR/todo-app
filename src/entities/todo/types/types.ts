@@ -1,6 +1,13 @@
 export interface ITodo {
-  id: string | number
-  name: string | null
-  description: string | null
-  status: "active" | "completed"
+  id?: number
+  name: string
+  description: string
+  status: TTodoStatus
 }
+
+export interface IFetchTodosParams {
+  search?: string
+  status?: TTodoStatus
+}
+
+export type TTodoStatus = "active" | "completed" | ""

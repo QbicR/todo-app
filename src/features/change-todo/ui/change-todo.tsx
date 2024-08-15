@@ -8,10 +8,9 @@ import { ChangeTodoForm } from "./change-todo-form"
 
 interface IProps {
   todo: ITodo
-  disabled: boolean
 }
 
-export const ChangeTodo: FC<IProps> = ({ todo, disabled }) => {
+export const ChangeTodo: FC<IProps> = ({ todo }) => {
   const { openModal, closeModal, modalContent } = useModalBase()
 
   const handleOpenModal = () => {
@@ -26,7 +25,7 @@ export const ChangeTodo: FC<IProps> = ({ todo, disabled }) => {
       <IconButton
         icon={<PenIcon className="scale-85" />}
         tooltipText="Изменить"
-        isDisabled={disabled}
+        isDisabled={todo.status === "completed"}
         onClick={handleOpenModal}
       />
       {modalContent}

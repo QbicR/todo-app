@@ -1,1 +1,1 @@
-export { useModalBase } from "./useModalBase"
+export { useModalBase } from "./use-modal-base"

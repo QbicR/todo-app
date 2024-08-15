@@ -1,3 +1,4 @@
+import type { FC } from "react"
 import type { SubmitHandler } from "react-hook-form"
 
 import { Button, SearchIcon, TextField } from "@/shared/ui"
@@ -9,12 +10,18 @@ interface ISearchValues {
 
 const INITIAL_VALUES: ISearchValues = { searchQuery: "" }
 
-export const FindTodo = () => {
+interface IProps {
+  setSearchValue: (search: string) => void
+}
+
+export const FindTodo: FC<IProps> = ({ setSearchValue }) => {
   const { register, handleSubmit } = useForm<ISearchValues>({
     defaultValues: INITIAL_VALUES,
   })
 
-  const handleFormSubmit: SubmitHandler<ISearchValues> = () => {}
+  const handleFormSubmit: SubmitHandler<ISearchValues> = values => {
+    setSearchValue(values.searchQuery)
+  }
 
   return (
     <form
@@ -27,6 +34,7 @@ export const FindTodo = () => {
         size="lg"
         startContent={<SearchIcon className="shrink-0 scale-85" />}
         {...register("searchQuery")}
+        isClearable
       />
       <Button type="submit">Найти</Button>
     </form>
