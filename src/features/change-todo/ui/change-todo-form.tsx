@@ -41,7 +41,7 @@ export const ChangeTodoForm: FC<IProps> = ({ todo, onSubmit }) => {
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(handleFormSubmit)} noValidate>
         <div className="flex flex-col gap-6 px-6 py-4">
-          <TodoFormFields />
+          <TodoFormFields idDisabled={false} />
         </div>
         <div className="flex items-center justify-end gap-4 px-6 py-4">
           {errors.root && (

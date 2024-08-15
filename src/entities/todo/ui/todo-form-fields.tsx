@@ -1,3 +1,5 @@
+import type { FC } from "react"
+
 import { TextField } from "@/shared/ui"
 import { useFormContext } from "react-hook-form"
 
@@ -6,10 +8,14 @@ export interface ITodoFormValues {
   description: string
 }
 
-export const TodoFormFields = () => {
+interface IProps {
+  idDisabled: boolean
+}
+
+export const TodoFormFields: FC<IProps> = ({ idDisabled }) => {
   const {
     register,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useFormContext<ITodoFormValues>()
 
   return (
@@ -19,7 +25,7 @@ export const TodoFormFields = () => {
         placeholder="Ведите наименование"
         errorMessage={errors.name?.message}
         {...register("name")}
-        isDisabled={isSubmitting}
+        isDisabled={idDisabled}
         isRequired
       />
       <TextField
@@ -27,7 +33,7 @@ export const TodoFormFields = () => {
         placeholder="Введите комментарий"
         errorMessage={errors.description?.message}
         {...register("description")}
-        isDisabled={isSubmitting}
+        isDisabled={idDisabled}
       />
     </>
   )
