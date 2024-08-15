@@ -12,10 +12,10 @@ interface IProps {
 }
 
 export const TodoItem: FC<IProps> = ({
-  todo: { name, description, completed },
+  todo: { name, description, status },
   actions,
 }) => {
-  const [checked, setChecked] = useState<boolean>(completed)
+  const [checked, setChecked] = useState<boolean>(status === "completed")
 
   return (
     <div
