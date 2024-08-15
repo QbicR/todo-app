@@ -15,7 +15,7 @@ export const AddTodo = () => {
 
   return (
     <>
-      <Button onClick={handleOpenModal}>Добавить дело</Button>
+      <Button onPress={handleOpenModal}>Добавить дело</Button>
       {modalContent}
     </>
   )

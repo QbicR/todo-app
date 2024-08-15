@@ -39,7 +39,7 @@ export const DeleteTodoModalContent: FC<IProps> = ({ todo, closeModal }) => {
           color="default"
           variant="flat"
           size="md"
-          onClick={closeModal}
+          onPress={closeModal}
           isDisabled={isDisabled}
         >
           Доделаю
@@ -51,7 +51,7 @@ export const DeleteTodoModalContent: FC<IProps> = ({ todo, closeModal }) => {
           <Button
             size="md"
             type="button"
-            onClick={handleDelete}
+            onPress={handleDelete}
             isDisabled={isDisabled}
             isLoading={isDisabled}
           >

@@ -12,7 +12,6 @@ export const IconButton: FC<TProps> = ({
   icon,
   tooltipText,
   disabled,
-  onClick,
   variant = "light",
   size = "sm",
   radius = "full",
@@ -31,7 +30,6 @@ export const IconButton: FC<TProps> = ({
       size={size}
       radius={radius}
       isDisabled={disabled}
-      onClick={onClick}
       {...otherProps}
     >
       {icon}

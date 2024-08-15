@@ -10,7 +10,6 @@ type TProps = {
 export const Button: FC<TProps> = ({
   tooltipText,
   disabled,
-  onClick,
   color = "primary",
   variant = "solid",
   size = "lg",
@@ -31,7 +30,6 @@ export const Button: FC<TProps> = ({
       size={size}
       radius={radius}
       isDisabled={disabled}
-      onClick={onClick}
       {...otherProps}
     >
       {children}

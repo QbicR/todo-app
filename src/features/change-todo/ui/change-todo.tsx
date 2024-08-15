@@ -26,7 +26,7 @@ export const ChangeTodo: FC<IProps> = ({ todo }) => {
         icon={<PenIcon className="scale-85" />}
         tooltipText="Изменить"
         isDisabled={todo.status === "completed"}
-        onClick={handleOpenModal}
+        onPress={handleOpenModal}
       />
       {modalContent}
     </>

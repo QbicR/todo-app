@@ -22,7 +22,7 @@ export const NotFoundPage = () => {
         </div>
         <Button
           className="w-fit"
-          onClick={() => navigate(AppPaths.main, { replace: true })}
+          onPress={() => navigate(AppPaths.main, { replace: true })}
         >
           На главную
         </Button>

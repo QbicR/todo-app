@@ -12,7 +12,7 @@ export const Header = () => {
           variant="light"
           color="default"
           className="w-fit px-0"
-          onClick={() => navigate(AppPaths.main, { replace: true })}
+          onPress={() => navigate(AppPaths.main, { replace: true })}
           startContent={<TodoIcon className="h-8 w-8" />}
         >
           Дела
