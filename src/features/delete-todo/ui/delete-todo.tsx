@@ -1,15 +1,22 @@
+import type { ITodo } from "@/entities/todo"
+import type { FC } from "react"
+
 import { useModalBase } from "@/shared/hooks"
 import { DeleteIcon, IconButton } from "@/shared/ui"
 
 import { DeleteTodoModalContent } from "./delete-todo-modal-content"
 
-export const DeleteTodo = () => {
+interface IProps {
+  todo: ITodo
+}
+
+export const DeleteTodo: FC<IProps> = ({ todo }) => {
   const { openModal, closeModal, modalContent } = useModalBase()
 
   const handleOpenDeleteTodoModal = () => {
     openModal({
       header: "Удаление дела",
-      content: <DeleteTodoModalContent onSubmit={closeModal} />,
+      content: <DeleteTodoModalContent closeModal={closeModal} todo={todo} />,
     })
   }
 

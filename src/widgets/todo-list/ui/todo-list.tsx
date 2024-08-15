@@ -28,7 +28,7 @@ export const TodoList: FC<IProps> = ({ todos, setFilterValue }) => {
             actions={
               <div className="flex gap-4">
                 <ChangeTodo todo={todo} />
-                <DeleteTodo />
+                <DeleteTodo todo={todo} />
               </div>
             }
           />

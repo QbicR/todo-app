@@ -60,13 +60,13 @@ export const AddTodoForm: FC<IProps> = ({ onSubmit }) => {
     }
   }
 
-  const idDisabled = status === "loading"
+  const isDisabled = status === "loading"
 
   return (
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(handleFormSubmit)} noValidate>
         <div className="flex flex-col gap-6 px-6 py-4">
-          <TodoFormFields idDisabled={idDisabled} />
+          <TodoFormFields isDisabled={isDisabled} />
         </div>
         <div className="flex items-center justify-end gap-4 px-6 py-4">
           {errors.root && (
@@ -75,8 +75,8 @@ export const AddTodoForm: FC<IProps> = ({ onSubmit }) => {
           <Button
             type="submit"
             size="md"
-            isDisabled={idDisabled}
-            isLoading={idDisabled}
+            isDisabled={isDisabled}
+            isLoading={isDisabled}
           >
             Добавить
           </Button>

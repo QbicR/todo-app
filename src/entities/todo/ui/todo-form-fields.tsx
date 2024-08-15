@@ -9,10 +9,10 @@ export interface ITodoFormValues {
 }
 
 interface IProps {
-  idDisabled: boolean
+  isDisabled: boolean
 }
 
-export const TodoFormFields: FC<IProps> = ({ idDisabled }) => {
+export const TodoFormFields: FC<IProps> = ({ isDisabled: isDisabled }) => {
   const {
     register,
     formState: { errors },
@@ -25,7 +25,7 @@ export const TodoFormFields: FC<IProps> = ({ idDisabled }) => {
         placeholder="Ведите наименование"
         errorMessage={errors.name?.message}
         {...register("name")}
-        isDisabled={idDisabled}
+        isDisabled={isDisabled}
         isRequired
       />
       <TextField
@@ -33,7 +33,7 @@ export const TodoFormFields: FC<IProps> = ({ idDisabled }) => {
         placeholder="Введите комментарий"
         errorMessage={errors.description?.message}
         {...register("description")}
-        isDisabled={idDisabled}
+        isDisabled={isDisabled}
       />
     </>
   )
