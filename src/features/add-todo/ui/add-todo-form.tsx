@@ -33,12 +33,15 @@ export const AddTodoForm: FC<IProps> = ({ onSubmit }) => {
     formState: { errors },
   } = methods
 
-  const handleFormSubmit: SubmitHandler<ITodoFormValues> = values => {
+  const handleFormSubmit: SubmitHandler<ITodoFormValues> = ({
+    name,
+    description,
+  }) => {
     try {
       mutate(
         {
-          name: values.name,
-          description: values.description,
+          name,
+          description,
           status: "active",
         },
         {
