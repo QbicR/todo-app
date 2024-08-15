@@ -1,5 +1,11 @@
 import type { ITodo } from "../types"
 
+export const NAME_ERROR = "Введите наименование"
+export const MAX_LENGHT = 100
+
+export const NAME_LENGHT_ERROR = "Слишком длинное наименование"
+export const DESCRIPTION_LENGHT_ERROR = "Слишком длинный комментарий"
+
 export const TODO_LIST: ITodo[] = [
   {
     id: "66bc9be42bae8dd9bfa725ac",

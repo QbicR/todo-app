@@ -19,7 +19,7 @@ export const TodoList = () => {
             todo={todo}
             actions={
               <div className="flex gap-4">
-                <ChangeTodo disabled={todo.completed} />
+                <ChangeTodo todo={todo} disabled={todo.completed} />
                 <DeleteTodo />
               </div>
             }
