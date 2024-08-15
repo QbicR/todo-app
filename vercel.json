@@ -1,3 +1,18 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "builds": [
+    {
+      "src": "json-server/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["json-server/db.json"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "json-server/index.js"
+    }
+  ]
 }
