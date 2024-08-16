@@ -8,13 +8,14 @@ const router = jsonServer.router(path.resolve(__dirname, "db.json"))
 // Нужно для небольшой задержки, чтобы запрос проходил не мгновенно, имитация реального апи
 server.use(async (req, res, next) => {
   await new Promise(res => {
-    setTimeout(res, 800)
+    setTimeout(res, 200)
   })
   next()
 })
 
 server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Methods", "*")
   res.header("Access-Control-Allow-Headers", "*")
   next()
 })
