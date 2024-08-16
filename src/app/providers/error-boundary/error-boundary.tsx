@@ -1,6 +1,7 @@
 import type { ErrorInfo, ReactNode } from "react"
 
-import { NotFoundPage } from "@/pages/not-found-page"
+import { ErrorBoundaryWidget } from "@/widgets/error-boundary-widget"
+import { Header } from "@/widgets/header"
 import React from "react"
 
 interface ErrorBoundaryProps {
@@ -34,7 +35,12 @@ export class ErrorBoundary extends React.Component<
     const { children } = this.props
 
     if (hasError) {
-      return <NotFoundPage />
+      return (
+        <>
+          <Header />
+          <ErrorBoundaryWidget />
+        </>
+      )
     }
 
     return children
