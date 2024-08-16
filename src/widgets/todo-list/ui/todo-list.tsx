@@ -16,7 +16,7 @@ export const TodoList: FC<IProps> = ({ todos, isFetching }) => {
   const showEmptyMssage = todos.length === 0 && !isFetching
 
   return (
-    <div className="relative h-full overflow-auto rounded shadow-md">
+    <div className="relative h-full overflow-auto">
       {isFetching && <OverlayLoader />}
       {showEmptyMssage ? (
         <EmptyMessage />

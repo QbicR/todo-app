@@ -19,7 +19,7 @@ export const TodoItem: FC<IProps> = ({ todo, changeStatus, actions }) => {
   return (
     <div
       className={twMerge(
-        "flex items-center gap-4 border-b border-gray-500 px-4 py-2 last:border-none",
+        "flex items-center gap-4 border-b border-blue-300 px-4 py-2 last:border-none",
         isCompleted ? "bg-blue-100/50" : "bg-blue-100",
       )}
     >
