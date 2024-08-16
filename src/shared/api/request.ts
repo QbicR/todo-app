@@ -2,7 +2,7 @@ import type { AxiosRequestConfig } from "axios"
 
 import axios from "axios"
 
-type TMethods = "get" | "post" | "put" | "delete"
+type TMethods = "get" | "post" | "put" | "delete" | "patch"
 
 const BASE_URL = import.meta.env.VITE_API_URL
 

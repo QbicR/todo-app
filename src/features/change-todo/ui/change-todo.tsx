@@ -20,12 +20,14 @@ export const ChangeTodo: FC<IProps> = ({ todo }) => {
     })
   }
 
+  const isDisabled = todo.status === "completed"
+
   return (
     <>
       <IconButton
         icon={<PenIcon className="scale-85" />}
         tooltipText="Изменить"
-        isDisabled={todo.status === "completed"}
+        isDisabled={isDisabled}
         onPress={handleOpenModal}
       />
       {modalContent}

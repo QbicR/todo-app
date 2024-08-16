@@ -42,7 +42,7 @@ export const ChangeTodoForm: FC<IProps> = ({ todo, onSubmit }) => {
       mutate(
         {
           id: todo.id!,
-          todo: { name, description },
+          todo: { ...todo, name, description },
         },
         {
           onSuccess: () => {
