@@ -10,14 +10,14 @@ export const AddTodo = () => {
 
   const handleOpenModal = () => {
     openModal({
-      header: "Добавление дела",
+      header: t("header.modal.add"),
       content: <AddTodoForm onSubmit={closeModal} />,
     })
   }
 
   return (
     <>
-      <Button onPress={handleOpenModal}>{t("buttons.addTodo")}</Button>
+      <Button onPress={handleOpenModal}>{t("button.addTodo")}</Button>
       {modalContent}
     </>
   )

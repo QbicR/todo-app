@@ -1,6 +1,7 @@
 import type { FC, PropsWithChildren } from "react"
 
 import { useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 interface IProps {
   title?: string
@@ -8,11 +9,13 @@ interface IProps {
 
 export const ContentTemplate: FC<PropsWithChildren<IProps>> = ({
   children,
-  title = "Список дел",
+  title,
 }) => {
+  const { t } = useTranslation()
+
   useEffect(() => {
-    window.document.title = title
-  }, [title])
+    window.document.title = title || t("title.default")
+  }, [title, t])
 
   return (
     <main className="relative flex h-main w-full grow flex-col items-center px-8 py-6">

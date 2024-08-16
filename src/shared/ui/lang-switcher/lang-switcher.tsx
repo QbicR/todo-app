@@ -4,7 +4,7 @@ import { IconButton } from "../icon-button"
 import { EnIcon, RuIcon } from "../icons"
 
 export const LangSwitcher = () => {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const isRuLang = i18n.language === "ru"
 
@@ -17,7 +17,7 @@ export const LangSwitcher = () => {
   return (
     <IconButton
       icon={icon}
-      tooltipText="Сменить язык"
+      tooltipText={t("tooltip.lang")}
       size="lg"
       variant="flat"
       onPress={changeLang}

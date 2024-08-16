@@ -1,3 +1,36 @@
 {
-  "todos": []
+  "todos": [
+    {
+      "name": "2",
+      "description": "2",
+      "status": "active",
+      "id": 3
+    }
+  ],
+  "en": {
+    "button": {
+      "addTodo": "Add todo",
+      "add": "Add",
+      "save": "Save",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "find": "Find",
+      "home": "Home",
+      "reload": "Reload",
+      "todos": "Todos"
+    }
+  },
+  "ru": {
+    "button": {
+      "addTodo": "Добавить дело",
+      "add": "Добавить",
+      "save": "Сохранить",
+      "delete": "Удалить",
+      "cancel": "Отменить",
+      "find": "Найти",
+      "home": "На главную",
+      "reload": "Обновить",
+      "todos": "Дела"
+    }
+  }
 }

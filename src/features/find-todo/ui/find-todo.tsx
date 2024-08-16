@@ -3,6 +3,7 @@ import type { SubmitHandler } from "react-hook-form"
 
 import { Button, SearchIcon, TextField } from "@/shared/ui"
 import { useForm } from "react-hook-form"
+import { useTranslation } from "react-i18next"
 
 interface ISearchValues {
   searchQuery: string
@@ -15,6 +16,8 @@ interface IProps {
 }
 
 export const FindTodo: FC<IProps> = ({ setSearchValue }) => {
+  const { t } = useTranslation()
+
   const { register, handleSubmit } = useForm<ISearchValues>({
     defaultValues: INITIAL_VALUES,
   })
@@ -30,14 +33,14 @@ export const FindTodo: FC<IProps> = ({ setSearchValue }) => {
       noValidate
     >
       <TextField
-        placeholder="Поиск"
+        placeholder={t("field.search.placeholder")}
         size="lg"
         startContent={<SearchIcon className="shrink-0 scale-85" />}
         onClear={() => setSearchValue("")}
         {...register("searchQuery")}
         isClearable
       />
-      <Button type="submit">Найти</Button>
+      <Button type="submit">{t("button.find")}</Button>
     </form>
   )
 }

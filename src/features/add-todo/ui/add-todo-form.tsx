@@ -2,11 +2,11 @@ import type { ITodoFormValues } from "@/entities/todo"
 import type { FC } from "react"
 import type { SubmitHandler } from "react-hook-form"
 
-import { TODO_FORM_VALIDATION_SCHEME, TodoFormFields } from "@/entities/todo"
-import { SOMETHINK_WENT_WRONG } from "@/shared/constants"
+import { useGetTodoFormScheme, TodoFormFields } from "@/entities/todo"
 import { Button } from "@/shared/ui"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { FormProvider, useForm } from "react-hook-form"
+import { useTranslation } from "react-i18next"
 
 import { useCreateTodo } from "../models"
 
@@ -21,10 +21,11 @@ interface IProps {
 
 export const AddTodoForm: FC<IProps> = ({ onSubmit }) => {
   const { mutate, status } = useCreateTodo()
+  const { t } = useTranslation()
 
   const methods = useForm<ITodoFormValues>({
     defaultValues: INITIAL_VALUES,
-    resolver: yupResolver(TODO_FORM_VALIDATION_SCHEME),
+    resolver: yupResolver(useGetTodoFormScheme()),
   })
 
   const {
@@ -50,13 +51,13 @@ export const AddTodoForm: FC<IProps> = ({ onSubmit }) => {
           },
           onError: () => {
             setError("root", {
-              message: SOMETHINK_WENT_WRONG,
+              message: t("error.somethingWentWrong"),
             })
           },
         },
       )
     } catch {
-      setError("root", { message: SOMETHINK_WENT_WRONG })
+      setError("root", { message: t("error.somethingWentWrong") })
     }
   }
 
@@ -78,7 +79,7 @@ export const AddTodoForm: FC<IProps> = ({ onSubmit }) => {
             isDisabled={isDisabled}
             isLoading={isDisabled}
           >
-            Добавить
+            {t("button.add")}
           </Button>
         </div>
       </form>

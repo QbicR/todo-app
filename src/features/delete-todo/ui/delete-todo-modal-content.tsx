@@ -1,8 +1,8 @@
 import type { ITodo } from "@/entities/todo"
 import type { FC } from "react"
 
-import { SOMETHINK_WENT_WRONG } from "@/shared/constants"
 import { Button } from "@/shared/ui"
+import { useTranslation } from "react-i18next"
 
 import { useDeleteTodo } from "../models"
 
@@ -13,6 +13,7 @@ interface IProps {
 
 export const DeleteTodoModalContent: FC<IProps> = ({ todo, closeModal }) => {
   const { mutate, status } = useDeleteTodo()
+  const { t } = useTranslation()
 
   const handleDelete = () => {
     mutate(
@@ -31,7 +32,7 @@ export const DeleteTodoModalContent: FC<IProps> = ({ todo, closeModal }) => {
   return (
     <>
       <div className="flex flex-col gap-6 px-6 py-4">
-        Вы уверены, что хотите удалить дело?
+        {t("text.deleteModal")}
       </div>
       <div className="flex justify-between px-6 py-4">
         <Button
@@ -42,11 +43,13 @@ export const DeleteTodoModalContent: FC<IProps> = ({ todo, closeModal }) => {
           onPress={closeModal}
           isDisabled={isDisabled}
         >
-          Отменить
+          {t("button.cancel")}
         </Button>
         <div className="flex items-center gap-4">
           {isError && (
-            <p className="text-sm text-red-500">{SOMETHINK_WENT_WRONG}</p>
+            <p className="text-sm text-red-500">
+              {t("error.somethingWentWrong")}
+            </p>
           )}
           <Button
             size="md"
@@ -55,7 +58,7 @@ export const DeleteTodoModalContent: FC<IProps> = ({ todo, closeModal }) => {
             isDisabled={isDisabled}
             isLoading={isDisabled}
           >
-            Удалить
+            {t("button.delete")}
           </Button>
         </div>
       </div>

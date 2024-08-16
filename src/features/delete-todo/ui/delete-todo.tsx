@@ -3,6 +3,7 @@ import type { FC } from "react"
 
 import { useModalBase } from "@/shared/hooks"
 import { DeleteIcon, IconButton } from "@/shared/ui"
+import { useTranslation } from "react-i18next"
 
 import { DeleteTodoModalContent } from "./delete-todo-modal-content"
 
@@ -12,10 +13,11 @@ interface IProps {
 
 export const DeleteTodo: FC<IProps> = ({ todo }) => {
   const { openModal, closeModal, modalContent } = useModalBase()
+  const { t } = useTranslation()
 
   const handleOpenDeleteTodoModal = () => {
     openModal({
-      header: "Удаление дела",
+      header: t("header.modal.delete"),
       content: <DeleteTodoModalContent closeModal={closeModal} todo={todo} />,
     })
   }
@@ -24,7 +26,7 @@ export const DeleteTodo: FC<IProps> = ({ todo }) => {
     <>
       <IconButton
         icon={<DeleteIcon className="scale-85" />}
-        tooltipText="Удалить"
+        tooltipText={t("tooltip.delete")}
         onPress={handleOpenDeleteTodoModal}
       />
       {modalContent}
