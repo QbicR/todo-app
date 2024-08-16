@@ -7,7 +7,7 @@
     "dev": "concurrently \"npm run start:client:dev\" \"npm run start:server:dev\"",
     "start:client:dev": "vite --mode=development",
     "start:server:dev": "node ./json-server/index.js",
-    "build": "tsc -b && vite build --mode=development",
+    "build": "tsc -b && vite build --mode=production",
     "format": "npx prettier --check './**/*.{js,ts,jsx,tsx}'",
     "format:fix": "npx prettier --check --write './**/*.{js,ts,jsx,tsx}'",
     "lint": "npx eslint \"**/*.{js,jsx,ts,tsx}\"",
