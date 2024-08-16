@@ -10,9 +10,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init<HttpBackendOptions>({
-    // backend: {
-    //   loadPath: ln => `http://localhost:8000/${ln}`,
-    // },
+    backend: {
+      loadPath: ln => `${import.meta.env.VITE_API_URL}${ln}`,
+    },
     fallbackLng: "ru",
     debug: false,
     react: {

@@ -31,6 +31,7 @@ export const FilterTodo: FC<IProps> = ({ setFilterValue }) => {
 
   return (
     <Select
+      aria-label="select"
       selectedKeys={[selectValue]}
       disabledKeys={[selectValue]}
       onChange={handleSelectionChange}
