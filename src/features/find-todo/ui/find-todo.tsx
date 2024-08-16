@@ -33,6 +33,7 @@ export const FindTodo: FC<IProps> = ({ setSearchValue }) => {
         placeholder="Поиск"
         size="lg"
         startContent={<SearchIcon className="shrink-0 scale-85" />}
+        onClear={() => setSearchValue("")}
         {...register("searchQuery")}
         isClearable
       />

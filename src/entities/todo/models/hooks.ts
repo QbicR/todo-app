@@ -9,7 +9,9 @@ const fetchTodos = async ({ search, status }: IFetchTodosParams) => {
   const params: {
     q?: string
     status?: TTodoStatus
-  } = {}
+    _sort?: keyof ITodo
+    _order?: "asc" | "desc"
+  } = { _sort: "id", _order: "desc" }
 
   if (search) {
     params.q = search
@@ -19,9 +21,7 @@ const fetchTodos = async ({ search, status }: IFetchTodosParams) => {
     params.status = status
   }
 
-  return (
-    await request<ITodo[]>("get", "/todos?_sort=id&_order=desc", { params })
-  ).data
+  return (await request<ITodo[]>("get", "/todos", { params })).data
 }
 
 const useGetTodos = ({ search, status }: IFetchTodosParams) =>
@@ -37,7 +37,7 @@ export const useGetAndFilterTodos = () => {
     status: TTodoStatus
   }>({ search: "", status: "" })
 
-  const { data, refetch } = useGetTodos({
+  const { data, refetch, isFetching } = useGetTodos({
     search,
     status,
   })
@@ -54,5 +54,5 @@ export const useGetAndFilterTodos = () => {
     setFilters(prevState => ({ ...prevState, status }))
   }
 
-  return { data, handleChangeSearch, handleChangeStatus }
+  return { data, isFetching, handleChangeSearch, handleChangeStatus }
 }

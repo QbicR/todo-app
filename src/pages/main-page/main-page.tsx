@@ -5,7 +5,7 @@ import { TodoList } from "@/widgets/todo-list"
 import { Toolbar } from "@/widgets/toolbar"
 
 export const MainPage = () => {
-  const { data, handleChangeSearch, handleChangeStatus } =
+  const { data, isFetching, handleChangeSearch, handleChangeStatus } =
     useGetAndFilterTodos()
 
   return (
@@ -13,9 +13,9 @@ export const MainPage = () => {
       <div className="flex h-full flex-col gap-8">
         <h1>Мои дела</h1>
         <FindTodo setSearchValue={handleChangeSearch} />
-        <div className="-m-2 flex h-fit flex-col gap-4 overflow-hidden p-2">
+        <div className="-m-2 flex h-full flex-col gap-4 overflow-hidden p-2">
           <Toolbar setFilterValue={handleChangeStatus} />
-          <TodoList todos={data || []} />
+          <TodoList todos={data || []} isFetching={isFetching} />
         </div>
       </div>
     </ContentTemplate>

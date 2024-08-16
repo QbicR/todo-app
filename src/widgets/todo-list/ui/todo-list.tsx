@@ -5,32 +5,38 @@ import { TodoItem } from "@/entities/todo"
 import { ChangeTodo } from "@/features/change-todo"
 import { ChangeTodoStatus } from "@/features/change-todo-status"
 import { DeleteTodo } from "@/features/delete-todo"
-import { Card } from "@nextui-org/react"
+import { EmptyMessage, OverlayLoader } from "@/shared/ui"
 
 interface IProps {
   todos: ITodo[]
+  isFetching: boolean
 }
 
-export const TodoList: FC<IProps> = ({ todos }) => {
-  if (todos.length === 0) {
-    return null
-  }
+export const TodoList: FC<IProps> = ({ todos, isFetching }) => {
+  const showEmptyMssage = todos.length === 0 && !isFetching
 
   return (
-    <Card shadow="sm" radius="sm" className="overflow-auto">
-      {todos.map((todo, index) => (
-        <TodoItem
-          key={index}
-          todo={todo}
-          changeStatus={<ChangeTodoStatus todo={todo} />}
-          actions={
-            <div className="flex gap-4">
-              <ChangeTodo todo={todo} />
-              <DeleteTodo todo={todo} />
-            </div>
-          }
-        />
-      ))}
-    </Card>
+    <div className="relative h-full overflow-auto rounded shadow-md">
+      {isFetching && <OverlayLoader />}
+      {showEmptyMssage ? (
+        <EmptyMessage />
+      ) : (
+        <div className="absolute top-0 h-fit w-full">
+          {todos.map((todo, index) => (
+            <TodoItem
+              key={index}
+              todo={todo}
+              changeStatus={<ChangeTodoStatus todo={todo} />}
+              actions={
+                <div className="flex gap-4">
+                  <ChangeTodo todo={todo} />
+                  <DeleteTodo todo={todo} />
+                </div>
+              }
+            />
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
