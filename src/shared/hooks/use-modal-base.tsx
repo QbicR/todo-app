@@ -27,9 +27,16 @@ export const useModalBase = () => {
   }
 
   const modalContent = (
-    <Modal size="3xl" isOpen={isOpen} onClose={closeModal}>
+    <Modal
+      size="3xl"
+      isOpen={isOpen}
+      onClose={closeModal}
+      className="bg-default-300"
+    >
       <ModalContent>
-        <ModalHeader className="font-medium">{modalState.header}</ModalHeader>
+        <ModalHeader className="font-medium text-foreground-600">
+          {modalState.header}
+        </ModalHeader>
         {modalState.content}
       </ModalContent>
     </Modal>

@@ -73,12 +73,7 @@ export const ChangeTodoForm: FC<IProps> = ({ todo, onSubmit }) => {
           {errors.root && (
             <p className="text-sm text-red-500">{errors.root.message}</p>
           )}
-          <Button
-            type="submit"
-            size="md"
-            isDisabled={isDisabled}
-            isLoading={isDisabled}
-          >
+          <Button type="submit" isDisabled={isDisabled} isLoading={isDisabled}>
             {t("button.save")}
           </Button>
         </div>

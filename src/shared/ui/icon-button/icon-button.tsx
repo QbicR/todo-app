@@ -12,8 +12,8 @@ export const IconButton: FC<TProps> = ({
   icon,
   tooltipText,
   disabled,
-  variant = "light",
-  size = "sm",
+  variant = "flat",
+  size = "md",
   radius = "full",
   ...otherProps
 }) => (
@@ -23,6 +23,7 @@ export const IconButton: FC<TProps> = ({
     closeDelay={100}
     delay={100}
     isDisabled={!tooltipText}
+    className="bg-default-300 text-foreground-600"
   >
     <Button
       isIconOnly

@@ -27,6 +27,7 @@ export const DeleteTodo: FC<IProps> = ({ todo }) => {
       <IconButton
         icon={<DeleteIcon className="scale-85" />}
         tooltipText={t("tooltip.delete")}
+        className="text-foreground-600"
         onPress={handleOpenDeleteTodoModal}
       />
       {modalContent}

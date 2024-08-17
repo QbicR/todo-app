@@ -37,8 +37,14 @@ export const FilterTodo: FC<IProps> = ({ setFilterValue }) => {
       onChange={handleSelectionChange}
       size="lg"
       color="default"
-      className="w-52"
+      className="w-52 text-foreground-600"
       radius="sm"
+      classNames={{
+        trigger: "bg-default-200",
+        value: "group-data-[has-value=true]:text-foreground-600",
+        popoverContent: "bg-default-200",
+        listbox: "text-foreground-600",
+      }}
     >
       {OPTIONS.map(option => (
         <SelectItem key={option.value}>{option.label}</SelectItem>

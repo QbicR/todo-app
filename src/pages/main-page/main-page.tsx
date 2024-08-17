@@ -13,7 +13,7 @@ export const MainPage = () => {
   return (
     <ContentTemplate title={t("title.main")}>
       <div className="flex h-full flex-col gap-8">
-        <h1>{t("header.app")}</h1>
+        <h1 className="text-foreground-600">{t("header.app")}</h1>
         <FindTodo setSearchValue={handleChangeSearch} />
         <div className="-m-2 flex h-full flex-col gap-4 overflow-hidden p-2">
           <Toolbar setFilterValue={handleChangeStatus} />

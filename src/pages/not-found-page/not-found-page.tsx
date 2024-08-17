@@ -20,11 +20,16 @@ export const NotFoundPage = () => {
             disableSkeleton={true}
             className="h-[236px]"
           />
-          <h3 className="text-center">{t("text.wrongAddress")}</h3>
-          <h3 className="text-center">{t("text.checkLink")}</h3>
+          <h3 className="text-center text-foreground-600">
+            {t("text.wrongAddress")}
+          </h3>
+          <h3 className="text-center text-foreground-600">
+            {t("text.checkLink")}
+          </h3>
         </div>
         <Button
           className="w-fit"
+          size="lg"
           onPress={() => navigate(AppPaths.main, { replace: true })}
         >
           {t("button.home")}

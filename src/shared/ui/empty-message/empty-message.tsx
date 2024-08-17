@@ -6,7 +6,7 @@ export const EmptyMessage = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="flex h-full flex-col items-center justify-start gap-6">
+    <div className="absolute top-0 flex h-full w-full flex-col items-center justify-start gap-6">
       <Image
         src={NotFoundImage}
         alt="NotFoundImage"
@@ -14,7 +14,7 @@ export const EmptyMessage = () => {
         disableSkeleton={true}
         className="h-[236px]"
       />
-      <span className="text-3xl font-medium uppercase text-[#d3d1ff]">
+      <span className="text-3xl font-medium uppercase text-foreground-600">
         {t("error.empty")}
       </span>
     </div>

@@ -22,8 +22,8 @@ export const ThemeSwitcher = () => {
         icon={icon}
         tooltipText={t("tooltip.theme")}
         size="lg"
-        variant="flat"
         onPress={changeTheme}
+        className="text-foreground-600"
       />
     </div>
   )

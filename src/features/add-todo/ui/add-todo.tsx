@@ -17,7 +17,9 @@ export const AddTodo = () => {
 
   return (
     <>
-      <Button onPress={handleOpenModal}>{t("button.addTodo")}</Button>
+      <Button onPress={handleOpenModal} size="lg">
+        {t("button.addTodo")}
+      </Button>
       {modalContent}
     </>
   )

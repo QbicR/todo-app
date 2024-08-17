@@ -29,7 +29,11 @@ export const ChangeTodoStatus: FC<IProps> = ({ todo }) => {
       size="lg"
       color="primary"
       isDisabled={isDisable}
-      classNames={{ wrapper: "m-0", base: "p-0 m-0" }}
+      classNames={{
+        wrapper:
+          "m-0 bg-default-300 border border-default-400 outline-none group-data-[hover=true]:before:bg-default-200",
+        base: "p-0 m-0",
+      }}
     />
   )
 }

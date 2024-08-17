@@ -12,13 +12,13 @@ import "./shared/config/i18n"
 createRoot(document.getElementById("root")!).render(
   <QueryClientProvider client={queryClient}>
     <BrowserRouter>
-      <ErrorBoundary>
-        <NextUIProvider>
-          <ThemeProvider attribute="class" defaultTheme="dark">
+      <NextUIProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <ErrorBoundary>
             <App />
-          </ThemeProvider>
-        </NextUIProvider>
-      </ErrorBoundary>
+          </ErrorBoundary>
+        </ThemeProvider>
+      </NextUIProvider>
     </BrowserRouter>
   </QueryClientProvider>,
 )

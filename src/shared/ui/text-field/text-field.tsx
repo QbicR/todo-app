@@ -25,9 +25,13 @@ export const TextField = forwardRef<HTMLInputElement, InputProps>(
       isInvalid={Boolean(errorMessage)}
       classNames={{
         ...classNames,
-        errorMessage: ["absolute"],
-        helperWrapper: ["p-0"],
-        innerWrapper: ["flex gap-4"],
+        errorMessage: "absolute",
+        helperWrapper: "p-0",
+        innerWrapper: "flex gap-4",
+        inputWrapper:
+          "flex gap-4 bg-default-200 group-data-[focus=true]:bg-default-200",
+        input: "group-data-[has-value=true]:text-foreground-600",
+        label: "group-data-[filled-within=true]:text-foreground-500",
       }}
       {...otherProps}
     />

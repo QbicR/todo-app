@@ -19,9 +19,11 @@ export const ErrorBoundaryWidget = () => {
             disableSkeleton={true}
             className="h-[236px]"
           />
-          <h3 className="text-center">{t("text.errorBoundary")}</h3>
+          <h3 className="text-center text-foreground-600">
+            {t("text.errorBoundary")}
+          </h3>
         </div>
-        <Button className="w-fit" onPress={() => navigate(0)}>
+        <Button className="w-fit" size="lg" onPress={() => navigate(0)}>
           {t("button.reload")}
         </Button>
       </div>

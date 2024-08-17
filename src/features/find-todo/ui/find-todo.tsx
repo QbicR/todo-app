@@ -35,12 +35,16 @@ export const FindTodo: FC<IProps> = ({ setSearchValue }) => {
       <TextField
         placeholder={t("field.search.placeholder")}
         size="lg"
-        startContent={<SearchIcon className="shrink-0 scale-85" />}
+        startContent={
+          <SearchIcon className="shrink-0 scale-85 text-foreground-600" />
+        }
         onClear={() => setSearchValue("")}
         {...register("searchQuery")}
         isClearable
       />
-      <Button type="submit">{t("button.find")}</Button>
+      <Button size="lg" type="submit">
+        {t("button.find")}
+      </Button>
     </form>
   )
 }

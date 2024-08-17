@@ -12,7 +12,7 @@ export const Button: FC<TProps> = ({
   disabled,
   color = "primary",
   variant = "solid",
-  size = "lg",
+  size = "md",
   radius = "sm",
   children,
   ...otherProps
