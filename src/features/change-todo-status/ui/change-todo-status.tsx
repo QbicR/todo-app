@@ -31,7 +31,7 @@ export const ChangeTodoStatus: FC<IProps> = ({ todo }) => {
       isDisabled={isDisable}
       classNames={{
         wrapper:
-          "m-0 bg-default-300 border border-default-400 outline-none group-data-[hover=true]:before:bg-default-200",
+          "m-0 bg-default-300 border border-default-400 outline-none group-data-[hover=true]:before:bg-default-200 before:!transition-none",
         base: "p-0 m-0",
       }}
     />

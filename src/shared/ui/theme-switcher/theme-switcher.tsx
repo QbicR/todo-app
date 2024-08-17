@@ -17,14 +17,11 @@ export const ThemeSwitcher = () => {
   const icon = isLight ? <DarkThemeIcon /> : <LightThemeIcon />
 
   return (
-    <div>
-      <IconButton
-        icon={icon}
-        tooltipText={t("tooltip.theme")}
-        size="lg"
-        onPress={changeTheme}
-        className="text-foreground-600"
-      />
-    </div>
+    <IconButton
+      icon={icon}
+      tooltipText={t("tooltip.theme")}
+      size="lg"
+      onPress={changeTheme}
+    />
   )
 }

@@ -2,6 +2,7 @@ import type { ButtonProps } from "@nextui-org/react"
 import type { FC } from "react"
 
 import { Button as NextButton, Tooltip } from "@nextui-org/react"
+import { twMerge } from "tailwind-merge"
 
 type TProps = {
   tooltipText?: string
@@ -15,24 +16,30 @@ export const Button: FC<TProps> = ({
   size = "md",
   radius = "sm",
   children,
+  className,
   ...otherProps
-}) => (
-  <Tooltip
-    placement="bottom"
-    content={tooltipText}
-    closeDelay={100}
-    delay={100}
-    isDisabled={!tooltipText}
-  >
-    <NextButton
-      variant={variant}
-      color={color}
-      size={size}
-      radius={radius}
-      isDisabled={disabled}
-      {...otherProps}
+}) => {
+  const defaultStyles = "!transition-none"
+
+  return (
+    <Tooltip
+      placement="bottom"
+      content={tooltipText}
+      closeDelay={100}
+      delay={100}
+      isDisabled={!tooltipText}
     >
-      {children}
-    </NextButton>
-  </Tooltip>
-)
+      <NextButton
+        variant={variant}
+        color={color}
+        size={size}
+        radius={radius}
+        isDisabled={disabled}
+        className={twMerge(defaultStyles, className)}
+        {...otherProps}
+      >
+        {children}
+      </NextButton>
+    </Tooltip>
+  )
+}

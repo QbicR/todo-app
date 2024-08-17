@@ -13,3 +13,8 @@ h1 {
 h3 {
   @apply text-xl font-medium;
 }
+
+.custom-break {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

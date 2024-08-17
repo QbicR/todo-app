@@ -28,14 +28,16 @@ export const TodoItem: FC<IProps> = ({ todo, changeStatus, actions }) => {
         <div className="flex flex-col gap-2">
           <label
             className={twMerge(
-              "leading-tight text-foreground-600",
+              "custom-break leading-tight text-foreground-600",
               isCompleted && "line-through",
             )}
           >
             {name}
           </label>
           {description && (
-            <p className="leading-tight text-foreground-500">{description}</p>
+            <p className="custom-break leading-tight text-foreground-500">
+              {description}
+            </p>
           )}
         </div>
         {actions}

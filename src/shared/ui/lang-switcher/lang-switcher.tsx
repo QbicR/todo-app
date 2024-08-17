@@ -19,7 +19,6 @@ export const LangSwitcher = () => {
       icon={icon}
       tooltipText={t("tooltip.lang")}
       onPress={changeLang}
-      className="text-foreground-600"
     />
   )
 }

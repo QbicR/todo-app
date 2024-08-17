@@ -29,7 +29,6 @@ export const ChangeTodo: FC<IProps> = ({ todo }) => {
       <IconButton
         icon={<PenIcon className="scale-85" />}
         tooltipText={t("tooltip.change")}
-        className="text-foreground-600"
         isDisabled={isDisabled}
         onPress={handleOpenModal}
       />

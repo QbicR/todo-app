@@ -20,7 +20,7 @@
     },
     {
       "name": "Мои делаМои делаМои делаМои дела",
-      "description": "Мои делаМои делаМои делаМои делаМои делаМои дела",
+      "description": "МоиделаМоиделаМоиделаМоиделаМоиделаМои дела",
       "status": "active",
       "id": 4
     }
@@ -77,7 +77,7 @@
       "somethingWentWrong": "Something went wrong. Try again."
     },
     "text": {
-      "deleteModal": "Are you sure you want to delete the case?",
+      "deleteModal": "Are you sure you want to delete the TODO?",
       "errorBoundary": "An unexpected error occurred. Refresh the page.",
       "loading": "Loading",
       "wrongAddress": "Unfortunately, you have visited a non-existent page. Perhaps you followed an old link or entered an incorrect address.",
