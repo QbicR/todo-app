@@ -1,4 +1,5 @@
 import { NextUIProvider } from "@nextui-org/react"
+import { ThemeProvider } from "next-themes"
 import { createRoot } from "react-dom/client"
 import { QueryClientProvider } from "react-query"
 import { BrowserRouter } from "react-router-dom"
@@ -13,7 +14,9 @@ createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <ErrorBoundary>
         <NextUIProvider>
-          <App />
+          <ThemeProvider attribute="class" defaultTheme="dark">
+            <App />
+          </ThemeProvider>
         </NextUIProvider>
       </ErrorBoundary>
     </BrowserRouter>

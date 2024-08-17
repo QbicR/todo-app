@@ -5,6 +5,18 @@
       "description": "1",
       "status": "active",
       "id": 1
+    },
+    {
+      "name": "2",
+      "description": "2",
+      "status": "active",
+      "id": 2
+    },
+    {
+      "name": "3",
+      "description": "3",
+      "status": "active",
+      "id": 3
     }
   ],
   "en": {
@@ -30,7 +42,8 @@
     "tooltip": {
       "delete": "Delete",
       "change": "Change",
-      "lang": "Change lang"
+      "lang": "Change lang",
+      "theme": "Change theme"
     },
     "select": {
       "all": "All TODOs",
@@ -94,7 +107,8 @@
     "tooltip": {
       "delete": "Удалить",
       "change": "Изменить",
-      "lang": "Сменить язык"
+      "lang": "Сменить язык",
+      "theme": "Сменить тему"
     },
     "select": {
       "all": "Все дела",

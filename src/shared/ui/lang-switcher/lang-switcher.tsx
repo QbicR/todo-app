@@ -8,7 +8,7 @@ export const LangSwitcher = () => {
 
   const isRuLang = i18n.language === "ru"
 
-  const changeLang = async () => {
+  const changeLang = () => {
     i18n.changeLanguage(isRuLang ? "en" : "ru")
   }
 

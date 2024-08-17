@@ -1,0 +1,12 @@
+:root {
+  --header-height: 72px;
+  --main-height: calc(100vh - var(--header-height));
+}
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  @apply rounded-br-xl rounded-tr-xl bg-blue-500;
+}

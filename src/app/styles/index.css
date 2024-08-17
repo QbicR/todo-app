@@ -1,15 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import "reset";
+@import "variables/global";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto;
-}
 
 h1 {
   @apply text-3xl font-medium;
@@ -17,17 +12,4 @@ h1 {
 
 h3 {
   @apply text-xl font-medium;
-}
-
-:root {
-  --header-height: 72px;
-  --main-height: calc(100vh - var(--header-height));
-}
-
-::-webkit-scrollbar {
-  @apply w-1;
-}
-
-*:hover::-webkit-scrollbar-thumb {
-  @apply rounded-br-xl rounded-tr-xl bg-blue-500;
 }
