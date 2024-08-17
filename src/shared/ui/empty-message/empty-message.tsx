@@ -6,7 +6,7 @@ export const EmptyMessage = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="absolute top-0 flex h-full w-full flex-col items-center justify-start gap-6">
+    <div className="flex h-full w-full flex-col items-center justify-start gap-6">
       <Image
         src={NotFoundImage}
         alt="NotFoundImage"

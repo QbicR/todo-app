@@ -3,6 +3,7 @@ import type { FC } from "react"
 import type { SubmitHandler } from "react-hook-form"
 
 import { useGetTodoFormScheme, TodoFormFields } from "@/entities/todo"
+import { TODO_LIST_ID } from "@/shared/constants"
 import { Button } from "@/shared/ui"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { FormProvider, useForm } from "react-hook-form"
@@ -38,6 +39,8 @@ export const AddTodoForm: FC<IProps> = ({ onSubmit }) => {
     name,
     description,
   }) => {
+    const element = document.getElementById(TODO_LIST_ID)
+
     try {
       mutate(
         {
@@ -47,6 +50,7 @@ export const AddTodoForm: FC<IProps> = ({ onSubmit }) => {
         },
         {
           onSuccess: () => {
+            element?.scrollIntoView({ block: "start", behavior: "instant" })
             onSubmit()
           },
           onError: () => {
