@@ -81,7 +81,7 @@
     {
       "name": "14",
       "description": "14",
-      "status": "completed",
+      "status": "active",
       "id": 14
     },
     {
@@ -159,7 +159,7 @@
     {
       "name": "7",
       "description": "7",
-      "status": "completed",
+      "status": "active",
       "id": 27
     },
     {
@@ -371,12 +371,6 @@
       "description": "test",
       "status": "active",
       "id": 522
-    },
-    {
-      "name": "1212",
-      "description": "2434",
-      "status": "active",
-      "id": 523
     },
     {
       "name": "fdfd",

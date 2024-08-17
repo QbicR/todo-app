@@ -1,7 +1,7 @@
 import type { ITodo, TTodoStatus } from "@/entities/todo"
-import type { FC } from "react"
 
 import { Checkbox } from "@nextui-org/react"
+import { memo, type FC } from "react"
 
 import { useChangeTodoStatus } from "../models"
 
@@ -9,7 +9,7 @@ interface IProps {
   todo: ITodo
 }
 
-export const ChangeTodoStatus: FC<IProps> = ({ todo }) => {
+export const ChangeTodoStatus: FC<IProps> = memo(({ todo }) => {
   const { mutate, status } = useChangeTodoStatus()
 
   const handleChangeStatus = () => {
@@ -36,4 +36,4 @@ export const ChangeTodoStatus: FC<IProps> = ({ todo }) => {
       }}
     />
   )
-}
+})

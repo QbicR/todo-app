@@ -1,7 +1,7 @@
-import type { FC } from "react"
 import type { SubmitHandler } from "react-hook-form"
 
 import { Button, SearchIcon, TextField } from "@/shared/ui"
+import { memo, type FC } from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
@@ -15,7 +15,7 @@ interface IProps {
   setSearchValue: (search: string) => void
 }
 
-export const FindTodo: FC<IProps> = ({ setSearchValue }) => {
+export const FindTodo: FC<IProps> = memo(({ setSearchValue }) => {
   const { t } = useTranslation()
 
   const { register, handleSubmit } = useForm<ISearchValues>({
@@ -47,4 +47,4 @@ export const FindTodo: FC<IProps> = ({ setSearchValue }) => {
       </Button>
     </form>
   )
-}
+})

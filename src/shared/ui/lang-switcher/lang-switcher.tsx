@@ -18,6 +18,7 @@ export const LangSwitcher = () => {
     <IconButton
       icon={icon}
       tooltipText={t("tooltip.lang")}
+      size="lg"
       onPress={changeLang}
     />
   )

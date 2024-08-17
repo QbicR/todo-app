@@ -1,8 +1,8 @@
 import type { ITodo } from "@/entities/todo"
-import type { FC } from "react"
 
 import { useModalBase } from "@/shared/hooks"
 import { IconButton, PenIcon } from "@/shared/ui"
+import { memo, type FC } from "react"
 import { useTranslation } from "react-i18next"
 
 import { ChangeTodoForm } from "./change-todo-form"
@@ -11,7 +11,7 @@ interface IProps {
   todo: ITodo
 }
 
-export const ChangeTodo: FC<IProps> = ({ todo }) => {
+export const ChangeTodo: FC<IProps> = memo(({ todo }) => {
   const { openModal, closeModal, modalContent } = useModalBase()
   const { t } = useTranslation()
 
@@ -35,4 +35,4 @@ export const ChangeTodo: FC<IProps> = ({ todo }) => {
       {modalContent}
     </>
   )
-}
+})

@@ -1,5 +1,9 @@
 import { request } from "@/shared/api"
-import { FETCH_TODOS_QUERY_KEY, PER_PAGE_LIMIT } from "@/shared/constants"
+import {
+  FETCH_TODOS_QUERY_KEY,
+  PER_PAGE_LIMIT,
+  TODO_LIST_ID,
+} from "@/shared/constants"
 import { useCallback, useEffect, useState } from "react"
 import { useQuery } from "react-query"
 
@@ -47,11 +51,13 @@ export const useGetAndFilterTodos = () => {
     limitPerPage: number
   }>({ search: "", status: "", limitPerPage: PER_PAGE_LIMIT })
 
-  const { data, refetch, isFetching, remove } = useGetTodos({
+  const { data, refetch, isFetching } = useGetTodos({
     search,
     status,
     limitPerPage,
   })
+
+  const element = document.getElementById(TODO_LIST_ID)
 
   useEffect(() => {
     refetch()
@@ -59,7 +65,7 @@ export const useGetAndFilterTodos = () => {
 
   const handleChangeSearch = useCallback(
     (search: string) => {
-      remove()
+      element?.scrollIntoView({ block: "start", behavior: "instant" })
 
       setFilters(prevState => ({
         ...prevState,
@@ -67,12 +73,12 @@ export const useGetAndFilterTodos = () => {
         limitPerPage: PER_PAGE_LIMIT,
       }))
     },
-    [remove],
+    [element],
   )
 
   const handleChangeStatus = useCallback(
     (status: TTodoStatus) => {
-      remove()
+      element?.scrollIntoView({ block: "start", behavior: "instant" })
 
       setFilters(prevState => ({
         ...prevState,
@@ -80,7 +86,7 @@ export const useGetAndFilterTodos = () => {
         limitPerPage: PER_PAGE_LIMIT,
       }))
     },
-    [remove],
+    [element],
   )
 
   const handleChangeLimit = (limit: number) => {
