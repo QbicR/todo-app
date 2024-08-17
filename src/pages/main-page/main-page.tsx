@@ -6,8 +6,13 @@ import { Toolbar } from "@/widgets/toolbar"
 import { useTranslation } from "react-i18next"
 
 export const MainPage = () => {
-  const { data, isFetching, handleChangeSearch, handleChangeStatus } =
-    useGetAndFilterTodos()
+  const {
+    data,
+    isFetching,
+    handleChangeSearch,
+    handleChangeStatus,
+    handleChangeLimit,
+  } = useGetAndFilterTodos()
   const { t } = useTranslation()
 
   return (
@@ -17,7 +22,11 @@ export const MainPage = () => {
         <FindTodo setSearchValue={handleChangeSearch} />
         <div className="-m-2 flex h-full flex-col gap-4 overflow-hidden p-2">
           <Toolbar setFilterValue={handleChangeStatus} />
-          <TodoList todos={data || []} isFetching={isFetching} />
+          <TodoList
+            todos={data || []}
+            isFetching={isFetching}
+            handleChangeLimit={handleChangeLimit}
+          />
         </div>
       </div>
     </ContentTemplate>
