@@ -12,7 +12,7 @@ export const LangSwitcher = () => {
     i18n.changeLanguage(isRuLang ? "en" : "ru")
   }
 
-  const icon = isRuLang ? <RuIcon /> : <EnIcon />
+  const icon = isRuLang ? <EnIcon /> : <RuIcon />
 
   return (
     <IconButton

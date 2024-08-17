@@ -5,13 +5,18 @@ import LanguageDetector from "i18next-browser-languagedetector"
 import Backend from "i18next-http-backend"
 import { initReactI18next } from "react-i18next"
 
+const BASE_URL =
+  import.meta.env.MODE === "production"
+    ? import.meta.env.VITE_API_URL
+    : "http://localhost:8000/"
+
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init<HttpBackendOptions>({
     backend: {
-      loadPath: ln => `${import.meta.env.VITE_API_URL}${ln}`,
+      loadPath: ln => `${BASE_URL}${ln}`,
     },
     fallbackLng: "ru",
     debug: false,

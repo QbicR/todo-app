@@ -9,7 +9,7 @@ export const ErrorBoundaryWidget = () => {
   const { t } = useTranslation()
 
   return (
-    <ContentTemplate title="Что-то пошло не так">
+    <ContentTemplate title={t("title.errorBoundary")}>
       <div className="flex h-fit flex-col items-center justify-start gap-8 pb-6">
         <div className="flex flex-col items-center gap-4">
           <Image
