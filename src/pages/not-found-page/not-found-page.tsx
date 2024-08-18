@@ -1,5 +1,5 @@
-import { AppPaths } from "@/app/providers"
 import NotFoundImage from "@/shared/assets/images/not-found-image.webp"
+import { AppPaths } from "@/shared/config/router"
 import { Button, ContentTemplate } from "@/shared/ui"
 import { Image } from "@nextui-org/react"
 import { useTranslation } from "react-i18next"
