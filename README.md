@@ -1,5 +1,5 @@
 # TODO app
-Ссылка на демонстрационный вариант - [ссылка](https://qbic-todo-app.vercel.app/)
+Демонстрационный вариант - [ссылка](https://qbic-todo-app.vercel.app/)
 
 # Реализовано:
 - Поиск задач
@@ -11,17 +11,18 @@
 - Адаптация под телефон
 
 # Стек:
-- vite
-- React
-- TypeScript 
-- React query
-- React hook forms
-- TailwindCSS
-- NextUI
-- i18n
-- json-server
-- FSD
-- husky
+- [vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [TypeScript ](https://www.typescriptlang.org/)
+- [React query](https://tanstack.com/query/v3)
+- [React hook form](https://react-hook-form.com/)
+- [yup](https://www.npmjs.com/package/yup)
+- [TailwindCSS](https://tailwindcss.com/)
+- [NextUI](https://nextui.org/)
+- [i18n](https://www.i18next.com/)
+- [json-server](https://www.npmjs.com/package/json-server/v/0.17.4)
+- [FSD](https://feature-sliced.design/)
+- [husky](https://www.npmjs.com/package/husky)
 
 # Запуск приложения:
 - npm i
