@@ -11,14 +11,17 @@
 - Адаптация под телефон
 
 # Стек:
+- vite
 - React
 - TypeScript 
 - React query
+- React hook forms
 - TailwindCSS
 - NextUI
 - i18n
 - json-server
 - FSD
+- husky
 
 # Запуск приложения:
 - npm i
