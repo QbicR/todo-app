@@ -1,10 +1,13 @@
 # TODO app
-Ссылка на демонстрационный вариант - https://qbic-todo-app.vercel.app/
+Ссылка на демонстрационный вариант - [ссылка](https://qbic-todo-app.vercel.app/)
 
 # Реализовано:
-- Смена языка (подгрузка языков идет с сервера)
+- Поиск задач
+- Фильтрация задач
+- Добавление/изменение/удаление задачи (Задачи сохраняются на удаленном json-server)
+- Подгрузка задач по скроллу
+- Смена языка (подгрузка языков с сервера)
 - Смена темы
-- Сохрание задач на удаленном json-server
 - Адаптация под телефон
 
 # Стек:
@@ -17,8 +20,8 @@
 - json-server
 - FSD
 
-Запуск приложения:
--   npm i
--   npm run dev - приложение запустится в production режиме. Все запросы будут идти на удаленный json-server по адресу https://json-server-todo-app.vercel.app/. Конфиг сервера находится в репозитории https://github.com/QbicR/json-server-todo-app
--   npm run start - приложение запустится в development режиме. Фронтенд часть на порту localhost:3000, json-server - localhost:8000. Все запросы будут идти на локальный сервер.
+# Запуск приложения:
+- npm i
+- npm run dev - приложение запустится в production режиме. Все запросы будут идти на [удаленный json-server](https://json-server-todo-app.vercel.app/). Конфиг сервера находится в [репозитории](https://github.com/QbicR/json-server-todo-app)
+- npm run start - приложение запустится в development режиме. В development режиме Фронтенд запустится на порту localhost:3000, json-server - localhost:8000. 
 
